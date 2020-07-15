@@ -27,7 +27,16 @@ namespace WordCounter.Service
              */
             string[] wordsArray = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
-            //Although it won't error, there is no need to continue with this method if the above found no words
+            /*
+             * Although it won't error, there is no need to continue with this method if the above found no words
+             * For clarity and to show thought process of why exception catching is not necessary here:
+             * All empty entries have already been removed so word will never be null
+             * GroupBy never returns null
+             * Select can be run on an empty Enumerable, simply returning an empty enumerable itself
+             * OrderbyDescending and Take can be run on an empty Enumerables and WordCount.Count is not nullable
+             * All eventualties should be covered by the conditions here and at the start of this method
+             */
+
             if (wordsArray.Length == 0)
             {
                 return Enumerable.Empty<WordCount>();
