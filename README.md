@@ -24,6 +24,6 @@ Steps taken:
   6) Write main method for output
   
 Drawbacks:
-    1) Delimiters for words were based on a quick google, some may be missed
-    2) As mentioned previously this will not support languages that use alternative punctuation (e.g spanish)
-    3) Whilst the method used to group the words may be more efficient than some others, this could still be improved if more time had been given (see comments in code for specifics)
+  1) Delimiters for words were based on a quick google, some may be missed
+  2) As mentioned previously this will not support languages that use alternative punctuation (e.g spanish)
+  3) Whilst the method used to group the words may be more efficient than some others, this could still be improved if more time had been given (see comments in code for specifics)
